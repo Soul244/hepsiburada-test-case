@@ -16,7 +16,22 @@ function AppContextProvider({ children }) {
     dispatch({ type: ACTIONS.REMOVE_BASKET, payload: { productId } });
   };
 
-  return <AppContext.Provider value={{ state, addBasket, removeBasket }}>{children}</AppContext.Provider>;
+  const searchText = (text) => {
+    const filteredProducts = state.products.filter(
+      (product) => product.title.toLocaleLowerCase().search(text.toLocaleLowerCase()) !== -1
+    );
+    dispatch({ type: ACTIONS.SEARCH_TEXT, payload: { products: filteredProducts } });
+  };
+
+  const clearFilters = () => {
+    dispatch({ type: ACTIONS.CLEAR_FILTERS });
+  };
+
+  return (
+    <AppContext.Provider value={{ state, addBasket, removeBasket, searchText, clearFilters }}>
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 AppContextProvider.propTypes = {};

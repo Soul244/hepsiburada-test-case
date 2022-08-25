@@ -7,7 +7,7 @@ $border-radius: 8px;
 .product-card {
   display: flex;
   flex-direction: column;
-  height: 475px;
+  height: 465px;
   border: 1px solid transparent;
   cursor: pointer;
   &:hover,
@@ -38,7 +38,7 @@ $border-radius: 8px;
     padding: 4px 15px;
     border: $card-border;
     border-radius: $border-radius;
-    object-fit: contain;
+    object-fit: cover;
   }
   &__title {
     margin: 0;
@@ -74,7 +74,7 @@ $border-radius: 8px;
     line-height: 129%;
   }
   &__old-price {
-    margin: 0;
+    margin: 0 5px 0 0;
     color: variables.$grey-500;
     font-size: 13px;
     line-height: 138%;
@@ -85,6 +85,7 @@ $border-radius: 8px;
     font-weight: variables.$weight-bold;
     font-size: 12px;
     line-height: 150%;
+    text-decoration-line: initial;
   }
   &__button {
     display: none;
