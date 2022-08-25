@@ -1,8 +1,7 @@
 @use 'styles/_variables' as variables;
 
 $content-padding: 10px 20px 0 20px;
-$card-border: 1px solid #e5e5e5;
-$border-radius: 8px;
+$card-border: 1px solid variables.$grey-300;
 
 .product-card {
   display: flex;
@@ -13,7 +12,7 @@ $border-radius: 8px;
   &:hover,
   &--selected {
     border: $card-border;
-    border-radius: $border-radius;
+    border-radius: variables.$border-radius-lg;
     .product-card__button {
       display: block;
     }
@@ -37,7 +36,7 @@ $border-radius: 8px;
     max-height: 332px;
     padding: 4px 15px;
     border: $card-border;
-    border-radius: $border-radius;
+    border-radius: variables.$border-radius-lg;
     object-fit: cover;
   }
   &__title {
@@ -94,7 +93,7 @@ $border-radius: 8px;
     height: 32px;
     background: rgba(variables.$main, 0.11);
     color: variables.$main;
-    border-radius: 8px;
+    border-radius: variables.$border-radius-lg;
     border: none;
     text-align: center;
     font-weight: variables.$weight-semibold;

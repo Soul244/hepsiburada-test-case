@@ -1,18 +1,37 @@
 @use 'styles/_variables' as variables;
 
 .basket {
-  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 48px;
   padding: 0 24px;
+  background-color: variables.$white;
   color: variables.$grey-400;
   border: 1px solid #b0b0b0;
-  border-radius: 4px;
+  border-radius: variables.$border-radius-sm;
   font-size: 17px;
   line-height: 143%;
   cursor: pointer;
+  &__container {
+    position: relative;
+    z-index: 1;
+    &:active,
+    &:hover {
+      .basket__popover {
+        display: flex;
+      }
+      .basket {
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  &__container--disabled {
+    pointer-events: none;
+  }
   &__count {
     position: absolute;
     right: -5px;
@@ -28,5 +47,64 @@
     font-weight: variables.$weight-semibold;
     font-size: 12px;
     line-height: 100%;
+  }
+  &__popover {
+    position: absolute;
+    z-index: -1;
+    top: 47px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 28px;
+    width: 360px;
+    height: 360px;
+    overflow-y: scroll;
+    background: #ffffff;
+    border: 1px solid variables.$grey-400;
+    border-radius: variables.$border-radius-sm;
+    list-style-type: none;
+  }
+  &__popover-item {
+    display: flex;
+    color: variables.$grey-700;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  &__popover-item:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+  &__popover-image {
+    width: 54px;
+    height: 72px;
+    min-height: 72px;
+    max-height: 72px;
+    margin: 0 20px 0 0;
+    padding: 8px;
+    border: 1px solid variables.$grey-300;
+    border-radius: variables.$border-radius-sm;
+    object-fit: cover;
+  }
+  &__popover-content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__popover-text {
+    margin: 0;
+  }
+  &__popover-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 18px;
+    margin: auto 0 0 0;
+    background: variables.$white;
+    color: variables.$red;
+    border: 1px solid variables.$red;
+    border-radius: variables.$border-radius-sm;
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 180%;
   }
 }

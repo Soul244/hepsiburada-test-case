@@ -44,6 +44,33 @@ const dynamicFilters = initialProducts.reduce(
   { colors: [], brands: [] }
 );
 
+const orderItems = [
+  {
+    id: 1,
+    name: 'En Düşük Fiyat',
+    value: ORDERS.ASC_PRICE,
+    isOrderFilter: true,
+  },
+  {
+    id: 2,
+    name: 'En Yüksek Fiyat',
+    value: ORDERS.DESC_PRICE,
+    isOrderFilter: true,
+  },
+  {
+    id: 3,
+    name: 'En Yeniler (A>Z)',
+    value: ORDERS.NEWEST,
+    isOrderFilter: true,
+  },
+  {
+    id: 4,
+    name: 'En Yeniler (Z>A)',
+    value: ORDERS.OLDEST,
+    isOrderFilter: true,
+  },
+];
+
 const initialFilters = [
   {
     id: 1,
@@ -53,32 +80,7 @@ const initialFilters = [
   {
     id: 2,
     name: 'Sıralama',
-    items: [
-      {
-        id: 1,
-        name: 'En Düşük Fiyat',
-        value: ORDERS.ASC_PRICE,
-        isOrderFilter: true,
-      },
-      {
-        id: 2,
-        name: 'En Yüksek Fiyat',
-        value: ORDERS.DESC_PRICE,
-        isOrderFilter: true,
-      },
-      {
-        id: 3,
-        name: 'En Yeniler (A>Z)',
-        value: ORDERS.NEWEST,
-        isOrderFilter: true,
-      },
-      {
-        id: 4,
-        name: 'En Yeniler (Z>A)',
-        value: ORDERS.OLDEST,
-        isOrderFilter: true,
-      },
-    ],
+    items: orderItems,
   },
   {
     id: 3,
@@ -87,4 +89,4 @@ const initialFilters = [
   },
 ];
 
-export { initialProducts, initialFilters, initialBasket };
+export { initialProducts, initialFilters, initialBasket, orderItems };

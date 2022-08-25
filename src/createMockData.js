@@ -11,8 +11,8 @@ const createMockData = (itemCount) => {
     mockData.push({
       id: mockData.length + 1,
       imgPath: faker.image.image(224, 322, true),
-      title: faker.commerce.product().slice(0, 30),
-      brand: faker.company.name().slice(0, 30),
+      title: faker.commerce.product().slice(0, 25),
+      brand: faker.company.name().slice(0, 25),
       color: faker.color.human(),
       price: newPrice,
       oldPrice: oldPrice,

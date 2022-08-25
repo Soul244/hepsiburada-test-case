@@ -1,0 +1,37 @@
+@use 'styles/_variables' as variables;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+  &__title {
+    margin: 0 0 15px 0;
+    color: variables.$grey-700;
+    font-weight: variables.$weight-bold;
+    font-size: 28px;
+    line-height: 100%;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 15px;
+    line-height: 100%;
+    color: variables.$grey-400;
+    span {
+      color: variables.$black;
+    }
+  }
+  &__select {
+    height: 48px;
+    color: variables.$grey-400;
+    border: 1px solid #b4b4bb;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 143%;
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+  }
+}

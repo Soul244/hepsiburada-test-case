@@ -37,7 +37,7 @@ function ProductCard(props) {
           <span className="product-card__discount-percentage">{discountPercentage}</span>
         </p>
       </div>
-      <button className="product-card__button" onClick={() => addBasket(props)} disabled={isInBasket}>
+      <button className="product-card__button" onClick={() => addBasket(props)} disabled={isInBasket} type="button">
         {isInBasket ? 'Bu ürünü sepete ekleyemezsiniz.' : 'Sepete Ekle'}
       </button>
     </div>

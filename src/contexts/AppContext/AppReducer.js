@@ -12,7 +12,7 @@ const appReducerInitialState = {
 const appReducer = (state, action) => {
   switch (action.type) {
     case ACTIONS.ADD_BASKET:
-      const newBasket = [...state.basket, action.payload.product];
+      const newBasket = [action.payload.product, ...state.basket];
       localStorage.setItem('basket', JSON.stringify(newBasket));
       return {
         ...state,
