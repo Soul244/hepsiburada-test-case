@@ -5,8 +5,8 @@ const appReducerInitialState = {
   products: initialProducts,
   basket: initialBasket,
   filters: initialFilters,
+  filter: null,
   order: null,
-  selectedFilters: [],
 };
 
 const appReducer = (state, action) => {
@@ -25,11 +25,16 @@ const appReducer = (state, action) => {
         ...state,
         basket: filteredBasket,
       };
-    case ACTIONS.FILTER:
     case ACTIONS.SEARCH_TEXT:
       return {
         ...state,
         products: action.payload.products,
+      };
+    case ACTIONS.FILTER:
+      return {
+        ...state,
+        products: action.payload.products,
+        filter: action.payload.filter,
       };
     case ACTIONS.ORDER:
       return {

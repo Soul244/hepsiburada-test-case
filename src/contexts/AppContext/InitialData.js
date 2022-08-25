@@ -18,13 +18,14 @@ initialBasket = initialBasket.map((basketItem) => {
   return { ...basketItem, createdAt: new Date(basketItem.createdAt) };
 });
 
-const getFilters = (items, filterName) => {
+const getFilters = (items, filterName, value) => {
   let filters = items;
   const foundIndex = items.findIndex((item) => item.name === filterName);
   if (foundIndex === -1) {
     filters.push({
       id: filters.length + 1,
       name: filterName,
+      value,
       count: 1,
     });
   } else {
@@ -36,8 +37,8 @@ const getFilters = (items, filterName) => {
 const dynamicFilters = initialProducts.reduce(
   ({ colors, brands }, product) => {
     return {
-      colors: getFilters(colors, product.color),
-      brands: getFilters(brands, product.brand),
+      colors: getFilters(colors, product.color, 'color'),
+      brands: getFilters(brands, product.brand, 'brand'),
     };
   },
   { colors: [], brands: [] }

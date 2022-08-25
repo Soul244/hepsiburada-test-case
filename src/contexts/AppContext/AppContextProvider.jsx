@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import { appReducer, appReducerInitialState } from './AppReducer';
 import AppContext from './AppContext';
 import { ACTIONS, ORDERS } from './contants';
+import { initialProducts } from './initialData';
 
 function AppContextProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, appReducerInitialState);
@@ -23,33 +24,40 @@ function AppContextProvider({ children }) {
     dispatch({ type: ACTIONS.SEARCH_TEXT, payload: { products: filteredProducts } });
   };
 
-  const handleOrder = (order) => {
-    let orderedProducts;
+  const orderProducts = (products, order) => {
     switch (order) {
       case ORDERS.ASC_PRICE:
-        orderedProducts = state.products.sort((a, b) => {
+        return products.sort((a, b) => {
           return a.price - b.price;
         });
-        break;
       case ORDERS.DESC_PRICE:
-        orderedProducts = state.products.sort((a, b) => {
+        return products.sort((a, b) => {
           return b.price - a.price;
         });
-        break;
       case ORDERS.OLDEST:
-        orderedProducts = state.products.sort((a, b) => {
+        return products.sort((a, b) => {
           return a.createdAt - b.createdAt;
         });
-        break;
       case ORDERS.NEWEST:
-        orderedProducts = state.products.sort((a, b) => {
+        return products.sort((a, b) => {
           return b.createdAt - a.createdAt;
         });
-        break;
       default:
         break;
     }
-    dispatch({ type: ACTIONS.ORDER, payload: { products: orderedProducts, order } });
+    return products;
+  };
+
+  const handleOrder = (order) => {
+    dispatch({ type: ACTIONS.ORDER, payload: { products: orderProducts(state.products, order), order } });
+  };
+
+  const filterProducts = ({ value, name }) => {
+    const filteredProducts = initialProducts.filter((product) => product[value] === name);
+    dispatch({
+      type: ACTIONS.FILTER,
+      payload: { products: orderProducts(filteredProducts, state.order), filter: name },
+    });
   };
 
   const clearFilters = () => {
@@ -57,7 +65,9 @@ function AppContextProvider({ children }) {
   };
 
   return (
-    <AppContext.Provider value={{ state, addBasket, removeBasket, searchText, clearFilters, handleOrder }}>
+    <AppContext.Provider
+      value={{ state, addBasket, removeBasket, searchText, clearFilters, handleOrder, filterProducts }}
+    >
       {children}
     </AppContext.Provider>
   );

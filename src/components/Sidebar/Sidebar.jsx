@@ -14,7 +14,7 @@ function Sidebar(props) {
           <h3 className="sidebar__title">{filter.name}</h3>
           <ul className="sidebar__list">
             {filter.items.map((filterItem) => (
-              <SidebarItem key={`filter-item-${filterItem.id}`} filterItem={filterItem}></SidebarItem>
+              <SidebarItem key={`filter-item-${filterItem.id}`} {...filterItem}></SidebarItem>
             ))}
           </ul>
         </Fragment>
