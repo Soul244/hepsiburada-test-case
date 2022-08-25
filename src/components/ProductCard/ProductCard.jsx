@@ -31,9 +31,9 @@ function ProductCard(props) {
         </div>
       </dl>
       <div className="product-card__content">
-        <p className="product-card__price">{price}</p>
+        <p className="product-card__price">{`${price} TL`}</p>
         <p style={{ margin: 0 }}>
-          <span className="product-card__old-price">{oldPrice}</span>
+          <span className="product-card__old-price">{`${oldPrice} TL`}</span>
           <span className="product-card__discount-percentage">{discountPercentage}</span>
         </p>
       </div>
@@ -49,8 +49,8 @@ ProductCard.propTypes = {
   title: PropTypes.string,
   brand: PropTypes.string,
   color: PropTypes.string,
-  price: PropTypes.string,
-  oldPrice: PropTypes.string,
+  price: PropTypes.number,
+  oldPrice: PropTypes.number,
   discountPercentage: PropTypes.string,
 };
 

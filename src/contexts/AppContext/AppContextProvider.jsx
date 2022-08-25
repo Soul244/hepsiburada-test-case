@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
-import PropTypes from 'prop-types';
-import { ACTIONS, appReducer, appReducerInitialState } from './AppReducer';
+import { appReducer, appReducerInitialState } from './AppReducer';
 import AppContext from './AppContext';
+import { ACTIONS, ORDERS } from './contants';
 
 function AppContextProvider({ children }) {
   const [state, dispatch] = useReducer(appReducer, appReducerInitialState);
@@ -23,17 +23,44 @@ function AppContextProvider({ children }) {
     dispatch({ type: ACTIONS.SEARCH_TEXT, payload: { products: filteredProducts } });
   };
 
+  const handleOrder = (order) => {
+    let orderedProducts;
+    switch (order) {
+      case ORDERS.ASC_PRICE:
+        orderedProducts = state.products.sort((a, b) => {
+          return a.price - b.price;
+        });
+        break;
+      case ORDERS.DESC_PRICE:
+        orderedProducts = state.products.sort((a, b) => {
+          return b.price - a.price;
+        });
+        break;
+      case ORDERS.ASC_CREATED_AT:
+        orderedProducts = state.products.sort((a, b) => {
+          return a.createdAt - b.createdAt;
+        });
+        break;
+      case ORDERS.DESC_CREATED_AT:
+        orderedProducts = state.products.sort((a, b) => {
+          return b.createdAt - a.createdAt;
+        });
+        break;
+      default:
+        break;
+    }
+    dispatch({ type: ACTIONS.ORDER, payload: { products: orderedProducts, order } });
+  };
+
   const clearFilters = () => {
     dispatch({ type: ACTIONS.CLEAR_FILTERS });
   };
 
   return (
-    <AppContext.Provider value={{ state, addBasket, removeBasket, searchText, clearFilters }}>
+    <AppContext.Provider value={{ state, addBasket, removeBasket, searchText, clearFilters, handleOrder }}>
       {children}
     </AppContext.Provider>
   );
 }
-
-AppContextProvider.propTypes = {};
 
 export default AppContextProvider;

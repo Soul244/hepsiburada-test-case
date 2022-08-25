@@ -1,4 +1,5 @@
 import createMockData from '../../createMockData';
+import { ORDERS } from './contants';
 
 let initialProducts = JSON.parse(localStorage.getItem('products'));
 const initialBasket = JSON.parse(localStorage.getItem('basket')) || [];
@@ -46,18 +47,26 @@ const initialFilters = [
       {
         id: 1,
         name: 'En Düşük Fiyat',
+        value: ORDERS.ASC_PRICE,
+        isOrderFilter: true,
       },
       {
         id: 2,
         name: 'En Yüksek Fiyat',
+        value: ORDERS.DESC_PRICE,
+        isOrderFilter: true,
       },
       {
         id: 3,
         name: 'En Yeniler (A>Z)',
+        value: ORDERS.ASC_CREATED_AT,
+        isOrderFilter: true,
       },
       {
         id: 4,
         name: 'En Yeniler (Z>A)',
+        value: ORDERS.DESC_CREATED_AT,
+        isOrderFilter: true,
       },
     ],
   },

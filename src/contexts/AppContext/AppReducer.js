@@ -1,17 +1,11 @@
-import { initialProducts, initialBasket, initialFilters } from './InitialData';
-
-const ACTIONS = {
-  ADD_BASKET: 'ADD_BASKET',
-  REMOVE_BASKET: 'REMOVE_BASKET',
-  SEARCH_TEXT: 'SEARCH_TEXT',
-  FILTER: 'FILTER',
-  CLEAR_FILTERS: 'CLEAR_FILTERS',
-};
+import { ACTIONS } from './contants';
+import { initialProducts, initialBasket, initialFilters } from './initialData';
 
 const appReducerInitialState = {
   products: initialProducts,
   basket: initialBasket,
   filters: initialFilters,
+  order: null,
   selectedFilters: [],
 };
 
@@ -37,6 +31,12 @@ const appReducer = (state, action) => {
         ...state,
         products: action.payload.products,
       };
+    case ACTIONS.ORDER:
+      return {
+        ...state,
+        products: action.payload.products,
+        order: action.payload.order,
+      };
     case ACTIONS.CLEAR_FILTERS:
       return {
         ...state,
@@ -47,4 +47,4 @@ const appReducer = (state, action) => {
   }
 };
 
-export { appReducer, appReducerInitialState, ACTIONS };
+export { appReducer, appReducerInitialState };
