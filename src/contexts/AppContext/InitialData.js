@@ -2,12 +2,21 @@ import createMockData from '../../createMockData';
 import { ORDERS } from './contants';
 
 let initialProducts = JSON.parse(localStorage.getItem('products'));
-const initialBasket = JSON.parse(localStorage.getItem('basket')) || [];
+let initialBasket = JSON.parse(localStorage.getItem('basket')) || [];
 
 if (!initialProducts) {
   initialProducts = createMockData(32);
   localStorage.setItem('products', JSON.stringify(initialProducts));
+} else {
+  // we need to convert date as Date Object
+  initialProducts = initialProducts.map((product) => {
+    return { ...product, createdAt: new Date(product.createdAt) };
+  });
 }
+
+initialBasket = initialBasket.map((basketItem) => {
+  return { ...basketItem, createdAt: new Date(basketItem.createdAt) };
+});
 
 const getFilters = (items, filterName) => {
   let filters = items;
@@ -59,13 +68,13 @@ const initialFilters = [
       {
         id: 3,
         name: 'En Yeniler (A>Z)',
-        value: ORDERS.ASC_CREATED_AT,
+        value: ORDERS.NEWEST,
         isOrderFilter: true,
       },
       {
         id: 4,
         name: 'En Yeniler (Z>A)',
-        value: ORDERS.DESC_CREATED_AT,
+        value: ORDERS.OLDEST,
         isOrderFilter: true,
       },
     ],

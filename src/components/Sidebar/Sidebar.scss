@@ -24,7 +24,8 @@
     line-height: 171%;
     transition: color 0.15s ease;
     cursor: pointer;
-    &:hover {
+    &:hover,
+    &--selected {
       color: variables.$main;
     }
   }

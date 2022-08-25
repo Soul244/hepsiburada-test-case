@@ -36,12 +36,12 @@ function AppContextProvider({ children }) {
           return b.price - a.price;
         });
         break;
-      case ORDERS.ASC_CREATED_AT:
+      case ORDERS.OLDEST:
         orderedProducts = state.products.sort((a, b) => {
           return a.createdAt - b.createdAt;
         });
         break;
-      case ORDERS.DESC_CREATED_AT:
+      case ORDERS.NEWEST:
         orderedProducts = state.products.sort((a, b) => {
           return b.createdAt - a.createdAt;
         });
