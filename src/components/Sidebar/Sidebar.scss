@@ -1,0 +1,30 @@
+@use 'styles/_variables' as variables;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  min-width: 160px;
+  margin: 15px 15px 0 0;
+  &__title {
+    margin: 0 0 20px 0;
+    color: variables.$grey-700;
+    font-weight: variables.$weight-semibold;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__list {
+    margin: 0 0 24px 0;
+    list-style-type: none;
+  }
+  &__list-item {
+    color: variables.$grey-600;
+    font-size: 14px;
+    line-height: 171%;
+    transition: color 0.15s ease;
+    cursor: pointer;
+    &:hover {
+      color: variables.$main;
+    }
+  }
+}

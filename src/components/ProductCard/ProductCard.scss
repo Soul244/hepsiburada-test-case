@@ -1,0 +1,111 @@
+@use 'styles/_variables' as variables;
+
+$content-padding: 10px 20px 0 20px;
+$card-border: 1px solid #e5e5e5;
+$border-radius: 8px;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 475px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  &:hover,
+  &--selected {
+    border: $card-border;
+    border-radius: $border-radius;
+    .product-card__button {
+      display: block;
+    }
+    .product-card__description,
+    .product-card__price,
+    .product-card__old-price,
+    .product-card__discount-percentage {
+      display: none;
+    }
+    .product-card__image {
+      border: 1px solid transparent;
+    }
+  }
+  &__image-container {
+    margin: 0;
+  }
+  &__image {
+    width: 100%;
+    height: 332px;
+    min-height: 332px;
+    max-height: 332px;
+    padding: 4px 15px;
+    border: $card-border;
+    border-radius: $border-radius;
+    object-fit: contain;
+  }
+  &__title {
+    margin: 0;
+    padding: $content-padding;
+    color: variables.$grey-700;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  &__content {
+    margin: auto 0 0 0;
+    padding: $content-padding;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    color: variables.$grey-700;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  &__description-title {
+    margin: 0;
+    font-weight: variables.$weight-bold;
+  }
+  &__description-text {
+    margin: 0;
+    font-weight: variables.$weight-default;
+  }
+  &__price {
+    margin: 0;
+    color: variables.$black;
+    font-weight: variables.$weight-bold;
+    font-size: 14px;
+    line-height: 129%;
+  }
+  &__old-price {
+    margin: 0;
+    color: variables.$grey-500;
+    font-size: 13px;
+    line-height: 138%;
+    text-decoration-line: line-through;
+  }
+  &__discount-percentage {
+    color: variables.$red;
+    font-weight: variables.$weight-bold;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  &__button {
+    display: none;
+    align-items: center;
+    margin: auto 20px 20px 20px;
+    height: 32px;
+    background: rgba(variables.$main, 0.11);
+    color: variables.$main;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-weight: variables.$weight-semibold;
+    font-size: 14px;
+    line-height: 129%;
+    cursor: pointer;
+    &:disabled {
+      background-color: rgba(variables.$dark, 0.11);
+      color: variables.$grey-400;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

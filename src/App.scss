@@ -1,0 +1,56 @@
+@use 'styles/_variables' as variables;
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+  &__title {
+    margin: 0 0 15px 0;
+    color: variables.$grey-700;
+    font-weight: variables.$weight-bold;
+    font-size: 28px;
+    line-height: 100%;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 15px;
+    line-height: 100%;
+    color: variables.$grey-400;
+    span {
+      color: variables.$black;
+    }
+  }
+}
+
+.content {
+  display: flex;
+}

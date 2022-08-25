@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 2,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 3,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 4,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 5,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 6,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 7,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 8,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 9,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 10,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 11,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 12,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 13,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 14,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 15,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 16,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 17,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 18,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 19,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 20,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 21,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 22,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 23,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 24,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 25,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 26,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 27,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 28,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 29,
+    "imgPath": "assets/mock/product_1.png",
+    "title": "Apple iPhone 11 Pro Maxi Phone 11 Pro Max iPhone 11",
+    "brand": "Apple",
+    "color": "Siyah",
+    "price": 90.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 30,
+    "imgPath": "assets/mock/product_2.png",
+    "title": "Apple iPhone 11",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 800.85,
+    "oldPrice": 900
+  },
+  {
+    "id": 31,
+    "imgPath": "assets/mock/product_3.png",
+    "title": "iPhone 11 Kırmızı Kılıf",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 127.85,
+    "oldPrice": 124
+  },
+  {
+    "id": 32,
+    "imgPath": "assets/mock/product_4.png",
+    "title": "Apple Telefon",
+    "brand": "Apple",
+    "color": "Sarı",
+    "price": 155.85,
+    "oldPrice": 124
+  }
+]
