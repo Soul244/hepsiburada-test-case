@@ -9,7 +9,9 @@ function Basket() {
     <div className={`basket__container ${!state.basket.length ? 'basket__container--disabled' : ''}`}>
       <div className="basket">
         Sepetim
-        <span className="basket__count">{state.basket.length}</span>
+        <span className="basket__count" data-testid="basket-count">
+          {state.basket.length}
+        </span>
       </div>
       <ul className="basket__popover">
         {state.basket.map((item) => (

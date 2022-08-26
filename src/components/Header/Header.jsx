@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 import './Header.scss';
 import { orderItems } from 'contexts/AppContext/initialData';
 import AppContext from 'contexts/AppContext/AppContext';
 
-function Header(props) {
+function Header() {
   const { state, handleOrder } = useContext(AppContext);
 
   return (
@@ -16,17 +15,17 @@ function Header(props) {
         </p>
       </div>
       <select className="header__select" value={state.order} onChange={(e) => handleOrder(e.target.value)}>
-        <option value="" disabled selected>
+        <option value="" disabled>
           Sıralama
         </option>
         {orderItems.map((item) => (
-          <option value={item.value}>{item.name}</option>
+          <option key={`option-${item.id}`} value={item.value}>
+            {item.name}
+          </option>
         ))}
       </select>
     </div>
   );
 }
-
-Header.propTypes = {};
 
 export default Header;

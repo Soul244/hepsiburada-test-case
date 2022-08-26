@@ -4,8 +4,10 @@ import AppContext from './AppContext';
 import { ACTIONS, ORDERS } from './contants';
 import { initialProducts } from './initialData';
 
-function AppContextProvider({ children }) {
-  const [state, dispatch] = useReducer(appReducer, appReducerInitialState);
+// i added static testState for test purposes
+function AppContextProvider({ children, testState }) {
+  const initialState = testState ? { ...appReducerInitialState, ...testState } : appReducerInitialState;
+  const [state, dispatch] = useReducer(appReducer, initialState);
 
   const addBasket = (product) => {
     if (!state.basket.some((item) => item.id === product.id)) {
@@ -66,7 +68,15 @@ function AppContextProvider({ children }) {
 
   return (
     <AppContext.Provider
-      value={{ state, addBasket, removeBasket, searchText, clearFilters, handleOrder, filterProducts }}
+      value={{
+        state,
+        addBasket,
+        removeBasket,
+        searchText,
+        clearFilters,
+        handleOrder,
+        filterProducts,
+      }}
     >
       {children}
     </AppContext.Provider>

@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
 import ProductCard from 'components/ProductCard/ProductCard';
 import AppContext from 'contexts/AppContext/AppContext';
 import './ProductCardList.scss';
 
-function ProductCardList(props) {
+function ProductCardList() {
   const { state } = useContext(AppContext);
 
   return (
@@ -15,7 +14,5 @@ function ProductCardList(props) {
     </main>
   );
 }
-
-ProductCardList.propTypes = {};
 
 export default ProductCardList;

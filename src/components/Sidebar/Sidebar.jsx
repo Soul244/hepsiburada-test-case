@@ -1,10 +1,9 @@
 import React, { useContext, Fragment } from 'react';
 import './Sidebar.scss';
-import PropTypes from 'prop-types';
 import AppContext from 'contexts/AppContext/AppContext';
 import SidebarItem from './SidebarItem';
 
-function Sidebar(props) {
+function Sidebar() {
   const { state } = useContext(AppContext);
 
   return (
@@ -22,7 +21,5 @@ function Sidebar(props) {
     </div>
   );
 }
-
-Sidebar.propTypes = {};
 
 export default Sidebar;

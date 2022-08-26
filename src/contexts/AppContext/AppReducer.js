@@ -6,7 +6,7 @@ const appReducerInitialState = {
   basket: initialBasket,
   filters: initialFilters,
   filter: null,
-  order: null,
+  order: '',
 };
 
 const appReducer = (state, action) => {
